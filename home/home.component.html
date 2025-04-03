@@ -1,0 +1,24 @@
+<ul>
+    <li *ngFor="let tool of tools">
+        <a>
+            <img src="{{tool.imageUrl}}" alt="tool images">
+            <div class="content">
+                <div class="name">
+                    {{tool.name}}
+                </div>
+                <span class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let orgin of tool.origins"></span>
+                        {{tool.origins}}
+                    </div>
+                </span>
+            </div>
+            <div>
+                <div class="price">
+                    <span>₹ </span>
+                    {{tool.price}}
+                </div>
+            </div>
+            </a>
+    </li>
+</ul>

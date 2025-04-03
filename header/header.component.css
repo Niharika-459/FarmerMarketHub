@@ -1,0 +1,32 @@
+header{
+    background-color: rgb(207, 217, 156);
+    padding:0;
+    border-bottom: 1px solid blanchedalmond;
+}
+a{
+    color:rgb(172, 76, 156);
+}
+a:hover{
+    background-color:rgb(146, 19, 129);
+    color: white;
+}
+.container{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+a.logo{
+    font-weight: bold;
+    padding: lem;
+
+}
+nav ul{
+    list-style-type: none;
+    margin:0;
+}
+nav ul li a{
+    padding: lem;
+    display: inline-block;
+
+}

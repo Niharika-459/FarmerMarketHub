@@ -1,0 +1,98 @@
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    padding: 10px;
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+ul li a {
+    height: 22rem;
+    width: 200px;
+    border: 1px solid #f0f0f0; /* Light border for a subtle look */
+    border-radius: 10px; /* Smoother rounded corners */
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    background-color: #f8f8f8; /* Subtle background */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth hover effect */
+    color: #810a06; /* Darker text color for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    padding: 15px;
+}
+
+ul li a:hover {
+    opacity: 0.95;
+    cursor: pointer;
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+ul li a img {
+    width:100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit:contain; /* Ensures image stays centered and scales properly */
+    margin-bottom: 10px;
+}
+
+ul li a .title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #9b5050; /* Ensures text is visible and readable */
+    text-align:left;
+}
+
+ul li a .description {
+    font-size: 0.9rem;
+    color: #a71e1e;
+    text-align:left;
+    padding: 0 5px;
+}
+ul li a.tool-name{
+    text-align:left;
+}
+ul li a.tool-location,ul li a.tool-price{
+    text-align:left;
+}
+.content{
+    padding:0;
+    position:relative;
+    
+}
+.product-item-footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.origins{
+    flex:9;
+    color:crimson
+}
+.name{
+    justify-content: left;
+    text-align: left;
+    font-weight: 400;
+}
+.origins span{
+    border-radius: 2rem;
+    background-color: aqua;
+    color:grey;
+    font-size: .7rem;
+    margin-right:.3rem;
+    display: inline-block;
+}
+.price{
+    color:rgb(14, 9, 9);
+}
