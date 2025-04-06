@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2GDLTlzaeMQpDhrpAx3lWsx-cyIIgsNuwOQ&s" alt="Farmer Market Logo" class="brand-logo">
+    <a routerLink="/home">Farmer Market Hub</a>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/cart" routerLinkActive="active">Cart</a>
+  </div>
+  <div class="nav-auth">
+    <a *ngIf="!isAuthenticated" routerLink="/login" routerLinkActive="active">Login</a>
+    <a *ngIf="!isAuthenticated" routerLink="/register" routerLinkActive="active">Register</a>
+    <a *ngIf="isAuthenticated" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main> 

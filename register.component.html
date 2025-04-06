@@ -1,0 +1,64 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>Create Your Account</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" formControlName="username" placeholder="Choose a username">
+        <div class="error-message" *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched">
+          Username is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+        <div class="error-message" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+          Please enter a valid email
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Create a password">
+        <div class="error-message" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+          Password must be at least 6 characters
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" formControlName="firstName" placeholder="Enter your first name">
+        <div class="error-message" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+          First name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" formControlName="lastName" placeholder="Enter your last name">
+        <div class="error-message" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+          Last name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address (Optional)</label>
+        <input type="text" id="address" formControlName="address" placeholder="Enter your address">
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number (Optional)</label>
+        <input type="tel" id="phoneNumber" formControlName="phoneNumber" placeholder="Enter your phone number">
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid || isLoading" class="register-button">
+        {{ isLoading ? 'Creating account...' : 'Create Account' }}
+      </button>
+
+      <div class="login-link">
+        Already have an account? <a routerLink="/login">Login here</a>
+      </div>
+    </form>
+  </div>
+</div>
